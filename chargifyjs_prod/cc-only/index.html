@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- This links to the Chargify hosted iframes for Chargify.js -->
+    <script src="https://js.chargify.com/latest/chargify.js"></script> 
+    <title>Example Chargifyjs Form</title>
+    <style>
+      .form-control {
+      	padding: 16px;
+      }
+      .form-box {
+        padding: 20px 5%;
+        margin-right: 0;
+        margin-left: 0;
+        border-width: .2rem;
+        margin: 1rem -15px 0;
+        border: solid #f7f7f9;
+        position: relative;
+        margin: 0 auto;
+        max-width: 900px;
+      }
+      #first_name iframe, 
+      #last_name iframe, 
+      #cc_number iframe {
+        width: 100% !important;
+      } 
+      #cc_month iframe {
+        width: 30% !important;
+      }
+      #cc_year iframe {
+        width: 30% !important;
+      }
+      #cc_cvv iframe {
+        width: 30% !important;
+      }   
+    </style>
+  </head>
+  <body>
+    <a href="../examples.html">← Back to all examples</a>
+    <div class="form-box">
+      <h2 align="left">Chargifyjs for Credit Cards</h2>
+      <hr style="margin-top:16px; margin-bottom:32px; border-bottom: 4px solid #e0e1ec;">
+      
+      <!-- error banner -->
+      <div class="alert alert-danger" role="alert" id="chargify-error-message" style="display:none;"></div>
+
+      <form id="chargify-form" action="methods/create.js" method="POST" style="display:none;">
+        
+      	<!-- contact names -->
+      	<h5 style="margin-bottom:32px;">Card Details</h5>
+
+        <div class="form-row">
+          <div class="form-group col-md-6" style="margin-bottom:0px;">
+            <div id="first_name"></div>
+          </div>
+          <div class="form-group col-md-6" style="margin-bottom:0px;">
+            <div id="last_name"></div>
+          </div>
+          <div class="form-group col-md-6">
+            <div id="cc_number"></div>
+          </div>
+          <div class="form-group col-md-6">
+            <span id="cc_month"></span>
+            <span id="cc_year"></span>
+            <span id="cc_cvv"></span>
+          </div>
+        </div>
+        
+        <button type="submit" style="padding:16px 32px;" class="btn btn-primary">Save Card</button>
+        The Chargify Token is: <input id="chargify-token" type="text" />
+      </form>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="methods/load.js"></script>   <!-- This contains your Chargify.js file -->
+    <script src="methods/submit.js"></script>  <!-- This pauses form submission to create a token -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script>
+    $( "#cc_number iframe" ).ready(function() {
+      $("#chargify-form").show();
+    });
+    </script>
+
+  </body>
+</html>

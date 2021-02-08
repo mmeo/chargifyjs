@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- This links to the Chargify hosted iframes for Chargify.js -->
+    <title>Chargifyjs Examples</title>
+    <style>
+      .form-control {
+      	padding: 16px;
+      }
+      .form-box {
+        padding: 20px 5%;
+        margin-right: 0;
+        margin-left: 0;
+        border-width: .2rem;
+        margin: 1rem -15px 0;
+        border: solid #f7f7f9;
+        position: relative;
+        margin: 0 auto;
+        max-width: 900px;
+      }  
+    </style>
+  </head>
+  <body>
+    <div class="form-box">
+      <h2 align="left">Chargifyjs Full Examples</h2>
+      <hr style="margin-top:16px; margin-bottom:32px; border-bottom: 4px solid #e0e1ec;">
+      
+      <b>Examples</b></br>
+      <li><a href="cc-only/index.html">Credit Card</a></li>
+      <li><a href="cc-and-billing-address/index.html">Credit Card with Billing Address</a></li>
+      <li><a href="paypal/index.html">Paypal</a></li>
+      <li><a href="ach/index.html">ACH</a></li>
+      <li><a href="gocardless/index.html">Gocardless Direct Debit</a></li>
+      
+      </br>
+
+      <b>Each example includes:</b></br>
+      <li>All form fields powered by secure Chargifyjs iframe fields</li>
+      <li>Error handling on form submission</li>
+      <li>Pre-configuration with all compatible payment gateways</li>
+      <li>Chargifyjs token generation (note: no API calls are made with these tokens)</li>
+      <li>Full code examples, so you can modify easily</li>
+      <li>Supports any HTML and CSS front-end</li>
+      <hr>
+      <div class="alert alert-secondary" role="alert">
+        All examples use Bootstrap and jQuery. Everything is open source and reusable. Happy developing!
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="methods/load.js"></script>   <!-- This contains your Chargify.js file -->
+    <script src="methods/submit.js"></script>  <!-- This pauses form submission to create a token -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  </body>
+</html>
